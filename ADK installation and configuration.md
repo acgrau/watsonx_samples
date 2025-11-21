@@ -4,7 +4,7 @@
 The information provided is taken from the following reference documentation and assumes you are running on a mac: https://developer.watson-orchestrate.ibm.com/getting_started/installing
 
 ### Step1 - Set up your environment (ref: https://developer.watson-orchestrate.ibm.com/getting_started/installing#before-you-begin) <br>
-Make sure you have python 3.11 installed. If not install using: 
+Make sure you have python 3.11 installed. If not, install using: 
 ```
 brew install python@3.11
 ```
@@ -69,15 +69,46 @@ You now have the orchestrate CLI install and ready to interact with running inst
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
-## Configure your target watsonx services
+## Configure your target watsonx environments
 You now need to define the target service you will be connecting to and for which you will be creating tools/agents. For this you will need to gather:
 - watsonx orchestrate service url
 - apikey for that service.
 
+To access this information in your IBM Cloud watsonx Orchestrate instance, open your environment and then go to Settings on top right:
 
+<img width="1548" height="991" alt="image" src="https://github.com/user-attachments/assets/8778703a-8dbf-4954-acfd-4dd3d2c017c7" />
 
+<br/>
 
+Then click on API Details tab, generate an API key, and record the service instance URL. Be sure to copy your API Key value once its shown or you will not be able retrieve it after the fact. 
+<img width="1546" height="536" alt="image" src="https://github.com/user-attachments/assets/a7c8ecbf-0265-4964-8a42-0c1a46a4f9e1" />
 
-## 
+Here is sample page with apikey details for creation: 
 
+<img width="600" height="461" alt="image" src="https://github.com/user-attachments/assets/ad281556-813e-4bb5-a097-1559f33e17e8" />
+
+Copy or download the key. 
+
+<img width="500" height="212" alt="image" src="https://github.com/user-attachments/assets/eb893bcc-6965-4bf5-a6c0-99b589a2c902" />
+
+<br/>
+
+You are now ready to add the environment to local orchestrate CLI environment.
+```
+orchestrate env add -n <provide_a_logical_name_for_your_own_reference> -u <replace_with_your_service_url>
+```
+You can add multiple target environments to the CLI but only one can be active at a time. This allows you to control which instance of Orchestrate you would like to connect with.
+Activate this new instance:
+```
+orchestrate env activate <logical_name_you_used_above> --api-key <APIKEY_recorded_above>
+```
+You can now see a list of available environments:
+```
+orchestrate env list
+```
+```
+(.venv) agrau@Alfonsos-MacBook-Pro wxo % orchestrate env list
+ grau-cloud  https://api.us-south.watson-orchestrate.cloud.ibm.com/instances/XXX  (active) 
+(.venv) agrau@Alfonsos-MacBook-Pro wxo %
+```
 
