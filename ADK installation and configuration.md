@@ -112,3 +112,10 @@ orchestrate env list
 (.venv) agrau@Alfonsos-MacBook-Pro wxo %
 ```
 
+Test your connection:
+```
+orchestrate agents list
+```
+You should see a tabluar list of agents that exist in the active service you are working with.
+
+For more information, please see the ADK Guide: https://developer.watson-orchestrate.ibm.com/getting_started/what_is
