@@ -7,7 +7,7 @@ The information provided is taken from the following reference documentation and
 (ref: https://developer.watson-orchestrate.ibm.com/getting_started/installing#before-you-begin) 
 #
 
-Create a new project folder for your local development and `cd` into the folder.
+Define where you want to install the ADK CLI and create a new project folder for your local development. `cd` into the folder.
 ex:
 ```
 mkdir wxo
