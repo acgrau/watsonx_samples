@@ -32,7 +32,7 @@ orchestrate tools import -k python -f ./get_healthcare_benefits.py
 
 Now publish (import) the service_now tools to the server:
 ```
-cd $WORK_DIR/tools/service_now
+cd $WORK_DIR/tools/servicenow
 ```
 ```
 orchestrate tools import -k python -f ./create_service_now_incident.py  -a service-now
