@@ -1,6 +1,12 @@
 ## Use the following steps as outlined in ADK documentation for the Empower Agent.
-https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_internal_employees
 
+See https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_internal_employees for details on this sample implementation.
+#
+
+### Clone this repo
+```
+git clone https://github.com/acgrau/watsonx_technical_assets.git
+```
 
 `cd` to the location of your watsonx orchestrate CLI and start the environment. See ADK Installation and Configuration Doc in this repo.
 Now cd to the location of customer_care assets:
@@ -12,13 +18,13 @@ Configure this as a root directory for this effort:
 WORK_DIR=$PWD/empower
 ```
 
-## Configure customer care connections:
-ServiceNow requires a live connection so we need to provide access to a servicenow instance
+### Configure needed connections:
+ServiceNow requires a live connection so we need to provide access to a servicenow instance. 
 
 ```
 orchestrate connections add -a service-now
-orchestrate connections configure -a service-now --env draft --type team --kind basic --url <the instance url>
-orchestrate connections set-credentials -a service-now --env draft -u admin -p '<servicenow_password>'
+orchestrate connections configure -a service-now --env draft --type team --kind basic --url <snow_instance_url>
+orchestrate connections set-credentials -a service-now --env draft -u <servicenow_username> -p '<servicenow_password>'
 ```
 
 Now publish (import) the customer_care tools to the server:
@@ -47,3 +53,4 @@ cd $WORK_DIR/agents
 orchestrate agents import -f service_now_agent.yaml
 orchestrate agents import -f customer_care_agent.yaml
 ```
+#### You can now access yout watsonx Orchestrate service and view the local agents and tools. You will see the `customer_care_agent` available and configured with healthcare tools a collaborative service_now agent.
