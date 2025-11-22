@@ -7,17 +7,13 @@ The information provided is taken from the following reference documentation and
 (ref: https://developer.watson-orchestrate.ibm.com/getting_started/installing#before-you-begin) 
 #
 
-Make sure you have python 3.11 installed. If not, install using: 
-```
-brew install python@3.11
-```
 Create a new project folder for your local development and `cd` into the folder.
 ex:
 ```
 mkdir wxo
 cd wxo
 ```
-Now create a local python environment. 
+Now create a local python 3.11 environment. 
 (If you don't have pyenv installed then use `brew install pyenv`) <br>
 ```
 pyenv install 3.11.14  
