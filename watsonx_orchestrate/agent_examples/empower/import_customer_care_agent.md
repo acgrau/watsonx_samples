@@ -19,15 +19,23 @@ WORK_DIR=$PWD/empower
 ```
 
 ### Configure needed connections:
-ServiceNow requires a live connection so we need to provide access to a servicenow instance. 
+Step 1: Make sure you are running the following commands from within the virtual environment. ie. from the defined folder where you installed the ADK you need to run 
+```
+. ./.venv/bin/activate
+```
+and you should see the (.venv) in the system prompt. ex:
+```
+(.venv) agrau@Alfonsos-MacBook-Pro wxo %
+```
 
+Step 2: ServiceNow requires a live connection so we need to create and configure a `connection` to a servicenow instance. 
 ```
 orchestrate connections add -a service-now
 orchestrate connections configure -a service-now --env draft --type team --kind basic --url <snow_instance_url>
 orchestrate connections set-credentials -a service-now --env draft -u <servicenow_username> -p '<servicenow_password>'
 ```
 
-Now publish (import) the customer_care tools to the server:
+Step 3: Publish (import) the customer_care and service_now tools to the server:
 ```
 cd $WORK_DIR/tools/customer_care
 ```
@@ -36,7 +44,6 @@ orchestrate tools import -k python -f ./get_my_claims.py
 orchestrate tools import -k python -f ./get_healthcare_benefits.py
 ```
 
-Now publish (import) the service_now tools to the server:
 ```
 cd $WORK_DIR/tools/servicenow
 ```
@@ -45,7 +52,7 @@ orchestrate tools import -k python -f ./create_service_now_incident.py  -a servi
 orchestrate tools import -k python -f ./get_my_service_now_incidents.py -a service-now
 ```
 
-Import Agents for both:
+Step 4: Publish (Import) the customer care `agent` and the servicenow collaborator `agent`:
 ```
 cd $WORK_DIR/agents
 ```
