@@ -35,14 +35,14 @@ Confirm you can activate the local environment <br>
 source ./.venv/bin/activate
 ```
 
-### Step 2: Install the local install of watsonx Orchestrate 
+### Step 2: Install the watsonx Orchestrate ADK
 ```
 pip install ibm-watsonx-orchestrate
 ```
 
 You now have the orchestrate CLI install and ready to interact with running instances of watsonx Orchestrate.
 ```
-(.venv) agrau@Alfonsos-MacBook-Pro temp % orchestrate
+(.venv) agrau@Alfonsos-MacBook-Pro wxo % orchestrate
                                                                                                                                                         
  Usage: orchestrate [OPTIONS] COMMAND [ARGS]...                                                                                                         
                                                                                                                                                         
@@ -73,7 +73,7 @@ You now have the orchestrate CLI install and ready to interact with running inst
 ```
 
 ## Configure your target watsonx environments
-You now need to define the target service you will be connecting to and for which you will be creating tools/agents. For this you will need to gather:
+You now need to define the target Orchestrate service you will be connecting to and for which you will be creating tools/agents. For this you will need to gather following information from you watsonx Orchestrate instance:
 - watsonx orchestrate service url
 - apikey for that service.
 
@@ -81,7 +81,7 @@ To access this information in your IBM Cloud watsonx Orchestrate instance, open 
 
 <img width="1548" height="991" alt="image" src="https://github.com/user-attachments/assets/8778703a-8dbf-4954-acfd-4dd3d2c017c7" />
 
-<br/>
+<br></br>
 
 Then click on API Details tab, generate an API key, and record the service instance URL. Be sure to copy your API Key value once its shown or you will not be able retrieve it after the fact. 
 <img width="1546" height="536" alt="image" src="https://github.com/user-attachments/assets/a7c8ecbf-0265-4964-8a42-0c1a46a4f9e1" />
@@ -90,7 +90,7 @@ Here is sample page with apikey details for creation:
 
 <img width="600" height="461" alt="image" src="https://github.com/user-attachments/assets/ad281556-813e-4bb5-a097-1559f33e17e8" />
 
-Copy or download the key. 
+Click Create and then copy or download the key. 
 
 <img width="500" height="212" alt="image" src="https://github.com/user-attachments/assets/eb893bcc-6965-4bf5-a6c0-99b589a2c902" />
 
