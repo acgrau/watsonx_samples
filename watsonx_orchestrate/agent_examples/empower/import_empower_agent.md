@@ -5,11 +5,11 @@ https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_interna
 `cd` to the location of your watsonx orchestrate CLI and start the environment. See ADK Installation and Configuration Doc in this repo.
 Now cd to the location of customer_care assets:
 ```
-cd ./watsonx_technical_assets/watsonx_orchestrate/agent_examples/customer_care
+cd ./watsonx_technical_assets/watsonx_orchestrate/agent_examples
 ```
 Configure this as a root directory for this effort:
 ```
-WORK_DIR=$PWD
+WORK_DIR=$PWD/empower
 ```
 
 ## Configure customer care connections:
