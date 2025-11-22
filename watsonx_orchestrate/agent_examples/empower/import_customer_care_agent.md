@@ -28,7 +28,7 @@ and you should see the (.venv) in the system prompt. ex:
 (.venv) agrau@Alfonsos-MacBook-Pro wxo %
 ```
 
-Step 2: ServiceNow requires a live connection so we need to create and configure a `connection` to a servicenow instance. 
+Step 2: ServiceNow requires a live connection so we need to create and configure a `connection` to a servicenow instance. (Note: If you do not have access to a ServiceNow instance you can still follow these steps. You just will not be able create and read ServiceNow incidents)
 ```
 orchestrate connections add -a service-now
 orchestrate connections configure -a service-now --env draft --type team --kind basic --url <snow_instance_url>
