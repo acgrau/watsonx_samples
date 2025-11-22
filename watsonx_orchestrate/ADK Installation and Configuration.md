@@ -3,7 +3,10 @@
 ## Installation
 The information provided is taken from the following reference documentation and assumes you are running on a mac: https://developer.watson-orchestrate.ibm.com/getting_started/installing
 
-### Step1 - Set up your environment (ref: https://developer.watson-orchestrate.ibm.com/getting_started/installing#before-you-begin) <br>
+### Step1 - Set up your environment 
+(ref: https://developer.watson-orchestrate.ibm.com/getting_started/installing#before-you-begin) 
+#
+
 Make sure you have python 3.11 installed. If not, install using: 
 ```
 brew install python@3.11
