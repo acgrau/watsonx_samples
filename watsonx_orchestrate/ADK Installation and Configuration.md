@@ -21,9 +21,18 @@ pyenv install 3.11.14
 ```
 pyenv local 3.11.14
 ```
+
 ```
 python -m venv .venv
 ```
+Note: If you have not used 'pyenv' before then the `python` command may not resolve. In that case, you may need to update your path using the following and then rerun `python -m venv .venv`
+
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+
 You should now see a .venv folder in your project directory (`ls -al`). This will be your local python working environment.
 
 Confirm you can activate the local environment <br>
