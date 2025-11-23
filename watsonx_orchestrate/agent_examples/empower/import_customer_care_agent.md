@@ -3,7 +3,7 @@
 See https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_internal_employees for details on this sample implementation.
 #
 
-=> Before starting be sure to have configured your virtual environment as documented in the ADK Installation guide in this repo. Run the following commands from within that environment.
+=> Before starting be sure to go to the working folder defined in the ADK Installation guide in this repo. 
 
 ### Clone this repo
 ```
