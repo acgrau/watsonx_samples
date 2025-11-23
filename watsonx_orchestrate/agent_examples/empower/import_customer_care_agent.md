@@ -3,6 +3,8 @@
 See https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_internal_employees for details on this sample implementation.
 #
 
+=> Before starting be sure to have configured your virtual environment as documented in the ADK Installation guide in this repo. Run the following commands from within that environment.
+
 ### Clone this repo
 ```
 git clone https://github.com/acgrau/watsonx_technical_assets.git
