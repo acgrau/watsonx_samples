@@ -6,18 +6,15 @@ See https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_int
 => Before starting be sure to go to the project folder you defined using the ADK Installation guide in this repo. ex: wxo
 
 ### Clone this repo
+
+
+`cd` to the location of your watsonx orchestrate CLI and start the environment. See ADK Installation and Configuration Doc in this repo.
+
 ```
 git clone https://github.com/acgrau/watsonx_technical_assets.git
 ```
-
-`cd` to the location of your watsonx orchestrate CLI and start the environment. See ADK Installation and Configuration Doc in this repo.
-Now cd to the location of customer_care assets:
 ```
-cd ./watsonx_technical_assets/watsonx_orchestrate/agent_examples
-```
-Configure this as a root directory for this effort:
-```
-WORK_DIR=$PWD/empower
+WORK_DIR=$PWD/watsonx_technical_assets/watsonx_orchestrate/agent_examples/empower
 ```
 
 ### Configure needed connections:
