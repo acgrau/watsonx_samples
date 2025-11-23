@@ -3,7 +3,7 @@
 See https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_2_arrows_internal_employees for details on this sample implementation.
 #
 
-=> Before starting be sure to go to the working folder defined in the ADK Installation guide in this repo. 
+=> Before starting be sure to go to the project folder you defined using the ADK Installation guide in this repo. ex: wxo
 
 ### Clone this repo
 ```
